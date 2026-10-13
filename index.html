@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="GameTools: herramientas gratuitas para gamers, configuraciones de audio, micrófonos y streaming.">
+
+    <title>GameTools | Herramientas para gamers</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="container navbar">
+            <a href="#" class="logo">Game<span>Tools</span></a>
+            <a href="#herramientas" class="nav-link">Herramientas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <span class="tag">TU ESPACIO GAMER</span>
+
+                <h1>Mejora tu juego con <span>GameTools</span></h1>
+
+                <p>
+                    Herramientas gratuitas para mejorar tu configuración,
+                    tu rendimiento y tu experiencia de juego.
+                </p>
+
+                <a href="#herramientas" class="button">
+                    Explorar herramientas
+                </a>
+            </div>
+        </section>
+
+        <section class="section container" id="herramientas">
+            <div class="section-heading">
+                <h2>Herramientas para gamers</h2>
+                <p>Utilidades prácticas para tu día a día.</p>
+            </div>
+
+            <div class="tools-grid">
+                <article class="tool-card">
+                    <div class="tool-icon">🎯</div>
+
+                    <h3>Calculadora de eDPI</h3>
+
+                    <p>
+                        Calcula tu eDPI usando los DPI del mouse
+                        y la sensibilidad de tu juego.
+                    </p>
+
+                    <a class="text-link" href="#edpi">
+                        Abrir herramienta →
+                    </a>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-icon">🖥️</div>
+
+                    <h3>Calculadora de FPS y Hz</h3>
+
+                    <p>
+                        Compara los FPS de tu juego con la frecuencia
+                        de actualización de tu monitor.
+                    </p>
+
+                    <a class="text-link" href="#fps">
+                        Abrir herramienta →
+                    </a>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-icon">🎙️</div>
+
+                    <h3>Asistente de audio</h3>
+
+                    <p>
+                        Recibe consejos personalizados para mejorar
+                        tu micrófono, tu voz y tu streaming.
+                    </p>
+
+                    <a class="text-link" href="#audio">
+                        Abrir herramienta →
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- HERRAMIENTA 1: EDPI -->
+
+        <section class="section calculator-section" id="edpi">
+            <div class="container calculator-container">
+                <div class="section-heading">
+                    <span class="tag">HERRAMIENTA 01</span>
+
+                    <h2>Calculadora de eDPI</h2>
+
+                    <p>
+                        Calcula tu eDPI multiplicando el DPI
+                        por la sensibilidad del juego.
+                    </p>
+                </div>
+
+                <div class="calculator-card">
+                    <form id="sensitivity-form">
+                        <div class="field">
+                            <label for="game">Juego</label>
+
+                            <select id="game">
+                                <option>Overwatch 2</option>
+                                <option>VALORANT</option>
+                                <option>Counter-Strike 2</option>
+                                <option>Fortnite</option>
+                                <option>Otro juego</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="dpi">DPI del mouse</label>
+
+                            <input
+                                id="dpi"
+                                type="number"
+                                min="1"
+                                max="100000"
+                                value="1600"
+                                required
+                            >
+                        </div>
+
+                        <div class="field">
+                            <label for="sensitivity">
+                                Sensibilidad del juego
+                            </label>
+
+                            <input
+                                id="sensitivity"
+                                type="number"
+                                min="0.001"
+                                max="10000"
+                                step="any"
+                                value="7.5"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="button full-width">
+                            Calcular eDPI
+                        </button>
+                    </form>
+
+                    <div class="result-panel" aria-live="polite">
+                        <span class="result-label">TU RESULTADO</span>
+
+                        <div class="result-number" id="edpi-result">
+                            12,000
+                        </div>
+
+                        <p id="result-description">
+                            1600 DPI × 7.5 de sensibilidad
+                        </p>
+                    </div>
+
+                    <p class="disclaimer">
+                        El eDPI es útil para comparar configuraciones
+                        dentro del mismo juego. Las escalas cambian
+                        entre diferentes juegos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HERRAMIENTA 2: FPS Y HZ -->
+
+        <section class="section calculator-section" id="fps">
+            <div class="container calculator-container">
+                <div class="section-heading">
+                    <span class="tag">HERRAMIENTA 02</span>
+
+                    <h2>Calculadora de FPS y Hz</h2>
+
+                    <p>
+                        Compara los fotogramas por segundo con
+                        la frecuencia de tu monitor.
+                    </p>
+                </div>
+
+                <div class="calculator-card">
+                    <form id="fps-form">
+                        <div class="field">
+                            <label for="game-fps">FPS del juego</label>
+
+                            <input
+                                id="game-fps"
+                                type="number"
+                                min="1"
+                                max="2000"
+                                step="any"
+                                value="100"
+                                required
+                            >
+                        </div>
+
+                        <div class="field">
+                            <label for="monitor-hz">
+                                Frecuencia del monitor
+                            </label>
+
+                            <select id="monitor-hz">
+                                <option value="60">60 Hz</option>
+                                <option value="75">75 Hz</option>
+                                <option value="100" selected>100 Hz</option>
+                                <option value="120">120 Hz</option>
+                                <option value="144">144 Hz</option>
+                                <option value="165">165 Hz</option>
+                                <option value="180">180 Hz</option>
+                                <option value="240">240 Hz</option>
+                                <option value="360">360 Hz</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="button full-width">
+                            Calcular rendimiento
+                        </button>
+                    </form>
+
+                    <div class="result-panel" aria-live="polite">
+                        <span class="result-label">RELACIÓN FPS / HZ</span>
+
+                        <div class="result-number" id="fps-ratio">
+                            100%
+                        </div>
+
+                        <p id="fps-description">
+                            100 FPS en un monitor de 100 Hz
+                        </p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-label">
+                                Intervalo entre fotogramas
+                            </span>
+
+                            <strong id="frame-time">10 ms</strong>
+                        </div>
+
+                        <div class="stat-card">
+                            <span class="stat-label">
+                                Intervalo de actualización
+                            </span>
+
+                            <strong id="refresh-time">10 ms</strong>
+                        </div>
+                    </div>
+
+                    <p class="disclaimer" id="fps-advice">
+                        Los FPS y los Hz están relacionados,
+                        pero no son lo mismo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HERRAMIENTA 3: ASISTENTE DE AUDIO -->
+
+        <section class="section calculator-section" id="audio">
+            <div class="container calculator-container">
+                <div class="section-heading">
+                    <span class="tag">HERRAMIENTA 03</span>
+
+                    <h2>Asistente de audio</h2>
+
+                    <p>
+                        Descubre qué ajustes puedes probar según
+                        tu micrófono, tu actividad y el problema
+                        de audio que quieres solucionar.
+                    </p>
+                </div>
+
+                <div class="calculator-card">
+                    <form id="audio-form">
+                        <div class="field">
+                            <label for="audio-use">
+                                ¿Para qué utilizas el micrófono?
+                            </label>
+
+                            <select id="audio-use">
+                                <option value="gaming">Jugar con amigos</option>
+                                <option value="discord">Discord y llamadas</option>
+                                <option value="streaming">Streaming y OBS</option>
+                                <option value="recording">Grabar voz y vídeos</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="mic-type">
+                                ¿Qué tipo de micrófono tienes?
+                            </label>
+
+                            <select id="mic-type">
+                                <option value="headset">Micrófono de headset</option>
+                                <option value="usb">Micrófono USB de escritorio</option>
+                                <option value="boom">Micrófono con brazo</option>
+                                <option value="laptop">Micrófono integrado</option>
+                                <option value="other">Otro tipo de micrófono</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="audio-problem">
+                                ¿Qué problema quieres solucionar?
+                            </label>
+
+                            <select id="audio-problem">
+                                <option value="quiet">Mi voz se escucha muy baja</option>
+                                <option value="noise">Se escucha el ventilador o ruido</option>
+                                <option value="echo">Tengo eco o escucho el sonido del juego</option>
+                                <option value="clarity">Quiero una voz más clara</option>
+                                <option value="clipping">Mi voz se escucha saturada</option>
+                                <option value="setup">Quiero configurar todo desde cero</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="audio-app">
+                                ¿Qué programa utilizas?
+                            </label>
+
+                            <select id="audio-app">
+                                <option value="discord">Discord</option>
+                                <option value="obs">OBS Studio</option>
+                                <option value="steelseries">SteelSeries GG / Sonar</option>
+                                <option value="windows">Configuración de Windows</option>
+                                <option value="other">Otro programa</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="button full-width">
+                            Obtener recomendaciones
+                        </button>
+                    </form>
+
+                    <div class="audio-result" id="audio-result" aria-live="polite" hidden>
+                        <span class="result-label">TU GUÍA PERSONALIZADA</span>
+
+                        <h3 id="audio-result-title">
+                            Recomendaciones de audio
+                        </h3>
+
+                        <p id="audio-result-intro"></p>
+
+                        <ul id="audio-tips" class="audio-tips"></ul>
+
+                        <p class="disclaimer" id="audio-extra"></p>
+
+                        <button
+                            type="button"
+                            class="button secondary-button"
+                            id="audio-reset"
+                        >
+                            Cambiar respuestas
+                        </button>
+                    </div>
+
+                    <p class="disclaimer">
+                        Las recomendaciones son orientativas. Los nombres
+                        y la disponibilidad de los filtros pueden variar
+                        según el programa y su versión.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about">
+            <div class="container about-content">
+                <h2>Un espacio para la comunidad gamer</h2>
+
+                <p>
+                    GameTools reúne herramientas prácticas para jugadores
+                    de PC y creadores de contenido. Seguiremos ampliando
+                    la plataforma con nuevas funciones.
+                </p>
+            </div>
+        </section>
+
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            © <span id="year"></span> GameTools.
+            Creado para la comunidad gamer.
+        </div>
+    </footer>
+</body>
+</html>
